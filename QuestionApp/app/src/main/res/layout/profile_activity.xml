@@ -1,0 +1,105 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="questionapp.frank.fca.com.questionapp.ProfileActivity"
+    android:id="@+id/">
+
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/topFrame"
+        android:layout_alignParentEnd="true"
+
+        >
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="141dp"
+            android:id="@+id/manIcon"
+            android:src="@drawable/man"
+            android:layout_gravity="left|bottom"
+            android:layout_alignEnd="@+id/topFrame"
+            android:layout_marginEnd="161dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Frank Cobby"
+            android:id="@+id/textView"
+            android:layout_gravity="right|center_vertical"
+            android:layout_below="@+id/topFrame"
+            android:layout_alignEnd="@+id/topFrame"
+            android:layout_marginEnd="57dp" />
+
+    </FrameLayout>
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/birthday"
+        android:id="@+id/birthdayIcon"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/websiteIcon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/websiteIcon"
+        android:src="@drawable/website"
+        android:layout_marginBottom="38dp"
+        android:layout_above="@+id/locationIcon"
+        android:layout_alignStart="@+id/locationIcon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationIcon"
+        android:src="@drawable/location"
+        android:layout_marginBottom="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="10th of July"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/birthdayIcon"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="City of Bath College"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/locationIcon"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="frankcobby.com"
+        android:id="@+id/textView6"
+        android:layout_gravity="left|top"
+        android:layout_alignBottom="@+id/websiteIcon"
+        android:layout_alignStart="@+id/textView4" /><![CDATA[
+    />
+
+
+]]>
+</RelativeLayout>
