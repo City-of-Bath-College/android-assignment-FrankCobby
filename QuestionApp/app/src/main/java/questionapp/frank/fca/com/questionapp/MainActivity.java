@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnTrue;
     private TextView lblQuestion;
     private ImageView imgPicture;
+    private TextView lblScore;
 
     private List<QuestionObject> questions;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnTrue = (Button) findViewById(R.id.btnTrue);
         lblQuestion = (TextView) findViewById(R.id.lblQuestion);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
+        lblScore = (TextView)findViewById(R.id.lblScore);
 
 
 // set questionnaire text
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         questions.add(new QuestionObject("Is this Spain's official flag?", true, R.drawable.spainflag));
         questions.add(new QuestionObject("Is this monument in Rome?", false, R.drawable.paris));
-        questions.add(new QuestionObject("Is New York the capital of USA?", false, R.drawable.usa));
+        questions.add(new QuestionObject("Is this Canada's flag?", false, R.drawable.usa));
         questions.add(new QuestionObject("Is this England's flag?", true, R.drawable.england));
         questions.add(new QuestionObject("His name is Luke Skywalker", false, R.drawable.vader));
         questions.add(new QuestionObject("This is a giraffe", true, R.drawable.giraffe));
@@ -107,15 +109,17 @@ public class MainActivity extends AppCompatActivity {
 
         if (answer == expectedAnwer){
             // You were right!
-
+            score++;
             Toast.makeText(MainActivity.this, "Well done!", Toast.LENGTH_SHORT).show();
         } else {
             // You were wrong!
 
             Toast.makeText(MainActivity.this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-            score++;
+
         }
 
+
+        lblScore.setText("Score = " + score);
         setupQuestion();
 
     }
