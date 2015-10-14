@@ -1,7 +1,10 @@
 package questionapp.frank.fca.com.questionapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnTrue = (Button) findViewById(R.id.btnTrue);
         lblQuestion = (TextView) findViewById(R.id.lblQuestion);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
-        lblScore = (TextView)findViewById(R.id.lblScore);
+        lblScore = (TextView) findViewById(R.id.lblScore);
 
 
 // set questionnaire text
@@ -74,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void generateQuestions(){
+    private void generateQuestions() {
 
         questions = new ArrayList<>();
 
@@ -92,22 +95,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupQuestion(){
+    private void setupQuestion() {
 
-        currentQuestion = questions.get(index);
+        if (index == questions.size()) {
+            // end game
+            Log.d("FRANK_APP", "You answered all the questions");
 
-        lblQuestion.setText(currentQuestion.getQuestion());
-        imgPicture.setImageResource(currentQuestion.getPicture());
+            endGame();
 
-        index++;
+        } else {
+
+            currentQuestion = questions.get(index);
+
+            lblQuestion.setText(currentQuestion.getQuestion());
+            imgPicture.setImageResource(currentQuestion.getPicture());
+
+            index++;
+
+        }
 
     }
 
-    private void determineButtonPress(boolean answer){
+    private void determineButtonPress(boolean answer) {
 
         boolean expectedAnwer = currentQuestion.isAnswer();
 
-        if (answer == expectedAnwer){
+        if (answer == expectedAnwer) {
             // You were right!
             score++;
             Toast.makeText(MainActivity.this, "Well done!", Toast.LENGTH_SHORT).show();
@@ -125,5 +138,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void endGame() {
+
+        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
+                .setTitle("Congratulations")
+                .setMessage("You scored " + score + " points this round!")
+                .setNeutralButton("ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        //don't do anything yet!
+                    }
+                })
+                .create();
+
+        alertDialog.show();
+
+    }
 
 }
+
+
+
+
+
