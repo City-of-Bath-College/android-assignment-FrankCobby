@@ -2,7 +2,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f9f8e9">
 
 
         <ImageView
@@ -11,7 +12,7 @@
             android:id="@+id/banner"
             android:src="@drawable/banner"
             />
-
+    //image
 
 
         <TextView
@@ -25,7 +26,7 @@
             android:layout_marginTop="75dp"
             android:layout_marginLeft="190dp"
             />
-
+     //text
 
     <ImageView
         android:layout_width="270dp"
@@ -34,6 +35,7 @@
         android:src="@drawable/me"
         android:layout_marginBottom="300dp"
         />
+    //image
 
     <ImageView
         android:layout_width="150dp"
@@ -42,7 +44,7 @@
         android:src="@drawable/birthday"
         android:layout_marginTop="205dp"
         android:layout_marginLeft="1dp"/>
-
+    //image
 
     <ImageView
         android:layout_width="150dp"
@@ -51,7 +53,7 @@
         android:src="@drawable/website"
         android:layout_marginTop="305dp"
         android:layout_marginLeft="1dp"/>
-
+    //image
 
     <ImageView
         android:layout_width="150dp"
@@ -60,7 +62,7 @@
         android:src="@drawable/location"
         android:layout_marginTop="405dp"
         android:layout_marginLeft="1dp"/>
-
+    //image
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,14 +71,16 @@
         android:layout_marginTop="230dp"
         android:layout_marginLeft="110dp"
         android:textSize="17dp"/>
+    //text
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:text="frankcobby.com"
+        android:text="http://www.project-tigr.co.uk"
         android:layout_marginTop="325dp"
         android:layout_marginLeft="110dp"
         android:textSize="17dp"/>
+    //text
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,6 +89,7 @@
         android:layout_marginTop="420dp"
         android:layout_marginLeft="110dp"
         android:textSize="17dp"/>
+    //text
 
 
 </RelativeLayout>

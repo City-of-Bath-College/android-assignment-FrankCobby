@@ -19,7 +19,7 @@ import java.util.List;
 
 import io.paperdb.Paper;
 
-public class MainActivity extends AppCompatActivity {
+public class MoreQuestionsActivity extends AppCompatActivity {
 
     //variables go here
     private Button btnFalse;
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 // set questionnaire text
-        lblQuestion.setText("This spacecraft belongs to Interstellar");
+        lblQuestion.setText("He is not Harry Potter");
 
 // set image picture
-        imgPicture.setImageResource(R.drawable.interstellar);
+        imgPicture.setImageResource(R.drawable.potter);
 
 //on click listeners
         btnTrue.setOnClickListener(new View.OnClickListener() {
@@ -86,16 +86,16 @@ public class MainActivity extends AppCompatActivity {
         questions = new ArrayList<>();
 
 
-        questions.add(new QuestionObject("This spacecraft belongs to Interstellar", true, R.drawable.interstellar));
-        questions.add(new QuestionObject("Tyler Durden is a character from American History X", false, R.drawable.fightclub));
-        questions.add(new QuestionObject("He is the main character from Taxi Driver", true, R.drawable.taxidriver));
-        questions.add(new QuestionObject("Is he Vito Corleone?", true, R.drawable.thegodfather));
-        questions.add(new QuestionObject("His name is Luke Skywalker", false, R.drawable.vader));
-        questions.add(new QuestionObject("This character is from The Shining", false, R.drawable.nicholson));
-        questions.add(new QuestionObject("Tom Hanks has never won an Oscar", false, R.drawable.hanks));
-        questions.add(new QuestionObject("His name is Quentin Tarantino", true, R.drawable.tarantino));
-        questions.add(new QuestionObject("Al Pacino was born in Italy", false, R.drawable.alpacino));
-        questions.add(new QuestionObject("He is the Man with No Name", true, R.drawable.eastwood));
+        questions.add(new QuestionObject("He is not Harry Potter", false, R.drawable.potter));
+        questions.add(new QuestionObject("Inception won the Oscar for Best Picture", false, R.drawable.inception));
+        questions.add(new QuestionObject("He is the main character from Matrix", true, R.drawable.matrix));
+        questions.add(new QuestionObject("They are characters from Despicable Me", false, R.drawable.toystory));
+        questions.add(new QuestionObject("Cristoph Waltz was born in Germany", false, R.drawable.waltz));
+        questions.add(new QuestionObject("This character is from Batman: The Dark Knight", true, R.drawable.joker));
+        questions.add(new QuestionObject("Leonardo DiCaprio has never won an Oscar", true, R.drawable.dicaprio));
+        questions.add(new QuestionObject("His name is Matt Damon", false, R.drawable.mark));
+        questions.add(new QuestionObject("He is from Narnia", false, R.drawable.ewok));
+        questions.add(new QuestionObject("His name is Martin Scorsese", false, R.drawable.woody));
 
     }
 
@@ -127,11 +127,11 @@ public class MainActivity extends AppCompatActivity {
         if (answer == expectedAnswer) {
             // You were right!
             score++;
-            Toast.makeText(MainActivity.this, "Well done!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MoreQuestionsActivity.this, "Well done!", Toast.LENGTH_SHORT).show();
         } else {
             // You were wrong!
 
-            Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MoreQuestionsActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
 
         }
 
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void endGame() {
 
-        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
+        final AlertDialog alertDialog = new AlertDialog.Builder(MoreQuestionsActivity.this)
                 .setTitle("Congratulations")
                 .setMessage("You scored " + score + " points!")
                 .setNeutralButton("ok", new DialogInterface.OnClickListener() {
@@ -160,8 +160,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
